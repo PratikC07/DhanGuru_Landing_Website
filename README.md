@@ -6,14 +6,6 @@ A modern, dark-themed pre-launch landing page for DhanGuru, an AI-powered person
 
 DhanGuru is an AI-powered personal finance platform designed for young Indian users. The landing page features a modern, interactive design with a focus on accessibility, multilingual support, and engaging user experience.
 
-## Hero Section
-- **Tagline:** "Guiding Every Rupee Right" (now appears on a single line with a typewriter animation)
-- **Description:**
-  > Empower your financial journey with DhanGuru—your smart, multilingual AI companion for budgeting, saving, and building wealth. Experience effortless money management, personalized insights, and guidance designed for the next generation of Indian achievers.
-- **Scroll Indicator:**
-  - The "Scroll to explore" message appears at the bottom of the hero section and smoothly disappears when the user scrolls down.
-  - This is implemented using the Intersection Observer API for reliable detection of scroll position and visibility.
-
 ## Features
 
 - 🌑 Modern dark-mode design with neon gradients and glowing accents
