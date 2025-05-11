@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -37,6 +38,9 @@ const Navbar = () => {
         top: element.offsetTop - 100, // Offset for the navbar
         behavior: 'smooth'
       });
+      
+      // Close mobile menu after clicking a link
+      setMobileMenuOpen(false);
     }
   };
 
@@ -70,14 +74,43 @@ const Navbar = () => {
           })}
         </nav>
 
-        <button className="bg-gradient-to-r from-accent-green to-accent-green-dark hover:from-accent-green-dark hover:to-accent-green text-white py-2 px-5 rounded-full font-medium transition-all duration-300 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hidden md:block">
-          Join Early Access
-        </button>
-
-        <button className="md:hidden text-white text-2xl">
-          ☰
+        <button 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden text-white text-2xl flex items-center justify-center w-10 h-10 focus:outline-none"
+          aria-label="Toggle mobile menu"
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
         </button>
       </div>
+
+      {/* Mobile dropdown menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden glassmorphism border-t border-white/10"
+          >
+            <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+              {['Features', 'About', 'GURU AI', 'Contact'].map((item) => {
+                const id = item.toLowerCase().replace(' ', '-');
+                return (
+                  <a
+                    key={item}
+                    href={`#${id}`}
+                    onClick={(e) => scrollToSection(e, id)}
+                    className="text-white/80 hover:text-accent-green transition-colors font-medium py-2 px-4 rounded-lg hover:bg-white/5"
+                  >
+                    {item}
+                  </a>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };

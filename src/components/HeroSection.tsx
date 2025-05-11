@@ -63,6 +63,17 @@ const HeroSection = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Function to scroll to a specific section
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   // Use Intersection Observer to detect when user scrolls away from the top
   useEffect(() => {
     if (typeof window === 'undefined' || !mounted || !sectionRef.current) return;
@@ -168,10 +179,16 @@ const HeroSection = () => {
             animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 1.4 }}
           >
-            <button className="bg-gradient-to-r from-accent-green to-accent-green-dark hover:from-accent-green-dark hover:to-accent-green text-white py-3 px-8 rounded-full font-medium transition-all duration-200 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)]">
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-gradient-to-r from-accent-green to-accent-green-dark hover:from-accent-green-dark hover:to-accent-green text-white py-3 px-8 rounded-full font-medium transition-all duration-200 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)]"
+            >
               Join Early Access
             </button>
-            <button className="border border-white/30 hover:border-accent-green text-white py-3 px-8 rounded-full font-medium transition-all duration-200 hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:bg-white/5">
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="border border-white/30 hover:border-accent-green text-white py-3 px-8 rounded-full font-medium transition-all duration-200 hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] hover:bg-white/5"
+            >
               Learn More
             </button>
           </motion.div>
