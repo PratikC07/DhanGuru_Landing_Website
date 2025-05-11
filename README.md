@@ -2,6 +2,18 @@
 
 A modern, dark-themed pre-launch landing page for DhanGuru, an AI-powered personal finance platform tailored for young Indian users.
 
+## Overview
+
+DhanGuru is an AI-powered personal finance platform designed for young Indian users. The landing page features a modern, interactive design with a focus on accessibility, multilingual support, and engaging user experience.
+
+## Hero Section
+- **Tagline:** "Guiding Every Rupee Right" (now appears on a single line with a typewriter animation)
+- **Description:**
+  > Empower your financial journey with DhanGuru—your smart, multilingual AI companion for budgeting, saving, and building wealth. Experience effortless money management, personalized insights, and guidance designed for the next generation of Indian achievers.
+- **Scroll Indicator:**
+  - The "Scroll to explore" message appears at the bottom of the hero section and smoothly disappears when the user scrolls down.
+  - This is implemented using the Intersection Observer API for reliable detection of scroll position and visibility.
+
 ## Features
 
 - 🌑 Modern dark-mode design with neon gradients and glowing accents
@@ -55,3 +67,22 @@ The project is ready to be deployed on platforms like Vercel, Netlify, or any ot
 ## License
 
 This project is licensed under the MIT License.
+
+## Customization
+- To update the hero tagline or description, edit `src/components/HeroSection.tsx`.
+- To adjust the scroll indicator behavior, see the Intersection Observer logic in the same file.
+
+## Development
+- Built with Next.js, React, and Tailwind CSS
+- To run locally:
+  ```bash
+  npm install
+  npm run dev
+  ```
+- The app will start on the next available port (default 3000, fallback 3001, etc.)
+
+## Animations
+- The GuruAI section uses a Lottie animation for the robot. See `public/animations/README.md` for details on customizing this animation.
+
+---
+For any further customization or questions, see the code comments or reach out to the project maintainer.

@@ -9,37 +9,37 @@ const features = [
     icon: <FiMic className="w-6 h-6" />,
     title: 'Voice Interaction',
     description: 'Hands-free finance management with AI understanding your voice commands.',
-    color: 'from-cyan-400 to-blue-500'
+    color: 'from-accent-green to-accent-teal'
   },
   {
     icon: <FiGlobe className="w-6 h-6" />,
     title: 'Multilingual UI',
     description: 'Available in multiple Indian languages for wide accessibility.',
-    color: 'from-purple-400 to-indigo-500'
+    color: 'from-accent-green-light to-accent-green'
   },
   {
     icon: <FiBarChart2 className="w-6 h-6" />,
     title: 'Smart Budgeting',
     description: 'Set budgets, get alerts, and analyze your spending habits.',
-    color: 'from-blue-400 to-violet-500'
+    color: 'from-accent-green to-accent-green-dark'
   },
   {
     icon: <FiCpu className="w-6 h-6" />,
     title: 'GURU AI',
     description: 'Personalized insights on spending, saving, and investing.',
-    color: 'from-teal-400 to-cyan-500'
+    color: 'from-accent-teal to-accent-green'
   },
   {
     icon: <FiTarget className="w-6 h-6" />,
     title: 'Goal Setting',
     description: 'Create, track, and get nudged toward your financial goals.',
-    color: 'from-blue-500 to-indigo-600'
+    color: 'from-accent-green-dark to-accent-green'
   },
   {
     icon: <FiUsers className="w-6 h-6" />,
     title: 'Collaborative Budgeting',
     description: 'Manage finances together with family or flatmates.',
-    color: 'from-cyan-500 to-blue-600'
+    color: 'from-accent-green to-accent-green-light'
   }
 ];
 
@@ -75,8 +75,8 @@ const FeaturesSection = () => {
   return (
     <section id="features" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/5 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-cyan-500/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-accent-green/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-accent-green-light/5 rounded-full filter blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -88,7 +88,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            <span className="gradient-text">Smart Features</span> for Everyone
+            <span className="text-accent-green">Smart Features</span> for Everyone
           </h2>
           <p className="text-gray-300 text-lg">
             DhanGuru simplifies personal finance with intelligent tools built for the digital age

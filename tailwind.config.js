@@ -19,7 +19,12 @@ module.exports = {
         },
         secondary: '#0f172a',
         accent: {
-          teal: '#06b6d4',
+          teal: '#06d486',
+          green: {
+            light: '#4ade80',
+            DEFAULT: '#22c55e',
+            dark: '#15803d',
+          },
           violet: '#8b5cf6',
           blue: '#3b82f6',
         },
@@ -32,10 +37,6 @@ module.exports = {
           500: '#6b7280',
           700: '#374151',
           800: '#1f2937'
-        },
-        green: {
-          400: '#4ade80',
-          500: '#22c55e'
         },
         red: {
           500: '#ef4444'

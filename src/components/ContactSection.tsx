@@ -37,8 +37,8 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute top-20 -left-20 w-96 h-96 bg-cyan-500/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-accent-green/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-20 -left-20 w-96 h-96 bg-accent-teal/10 rounded-full filter blur-3xl"></div>
       </div>
       
       <motion.div 
@@ -50,7 +50,7 @@ const ContactSection = () => {
       >
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            <span className="gradient-text">Join</span> the Waitlist
+            <span className="text-accent-green">Join</span> the Waitlist
           </h2>
           <p className="text-gray-300 text-lg">
             Be among the first to experience DhanGuru. Early access members will receive premium features for free.
@@ -58,8 +58,8 @@ const ContactSection = () => {
         </div>
         
         <div className="max-w-lg mx-auto glassmorphism p-8 rounded-2xl relative overflow-hidden">
-          <div className="absolute -right-16 -top-16 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute -left-16 -bottom-16 w-32 h-32 bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute -right-16 -top-16 w-32 h-32 bg-gradient-to-r from-accent-green/20 to-accent-teal/20 rounded-full blur-3xl"></div>
+          <div className="absolute -left-16 -bottom-16 w-32 h-32 bg-gradient-to-r from-accent-green-light/20 to-accent-green/20 rounded-full blur-3xl"></div>
           
           <form onSubmit={handleSubmit} className="relative z-10">
             <div className="mb-6">
@@ -78,11 +78,11 @@ const ContactSection = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="you@example.com"
-                        className="glassmorphism border border-gray-700 hover:border-cyan-500 focus:border-cyan-500 focus:ring-0 rounded-l-lg py-3 px-4 w-full text-white bg-transparent transition-all duration-300"
+                        className="glassmorphism border border-gray-700 hover:border-accent-green focus:border-accent-green focus:ring-0 rounded-l-lg py-3 px-4 w-full text-white bg-transparent transition-all duration-300"
                       />
                       <button
                         type="submit"
-                        className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white py-3 px-6 rounded-r-lg font-medium transition-all duration-300 flex items-center"
+                        className="bg-gradient-to-r from-accent-green to-accent-green-dark hover:from-accent-green-dark hover:to-accent-green text-white py-3 px-6 rounded-r-lg font-medium transition-all duration-300 flex items-center"
                       >
                         {submissionError ? <FiAlertCircle className="mr-2" /> : <FiSend className="mr-2" />}
                         Subscribe
@@ -99,7 +99,7 @@ const ContactSection = () => {
                       exit={{ opacity: 0 }}
                       className="absolute inset-0 flex items-center justify-center"
                     >
-                      <div className="w-8 h-8 border-4 border-t-cyan-500 border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin"></div>
+                      <div className="w-8 h-8 border-4 border-t-accent-green border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin"></div>
                     </motion.div>
                   )}
                 </AnimatePresence>

@@ -19,11 +19,11 @@ const Logo = ({ size = 'medium', className = '' }: LogoProps) => {
       className={`font-display font-bold ${sizes[size]} ${className}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
     >
-      <span className="gradient-text">Dhan</span>
-      <span className="text-white">Guru</span>
+      <span className="text-accent-green-dark">Dhan</span>
+      <span className="text-accent-blue">Guru</span>
     </motion.div>
   );
 };
